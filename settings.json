@@ -1,0 +1,248 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "copyOnSelect": true,
+    "copyFormatting": false,
+    "profiles": {
+        "defaults": {
+            // Put settings here that you want to apply to all profiles.
+        },
+        "list": [
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "useAcrylic": false
+            },
+            {
+                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
+                "hidden": false,
+                "name": "kali-linux",
+                "source": "Windows.Terminal.Wsl",
+                "colorScheme": "One Half Dark",
+                "tabColor": "#1E90FF",
+                "useAcrylic": false
+            },
+            {
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "hidden": false,
+                "name": "Ubuntu-18.04",
+                "source": "Windows.Terminal.Wsl",
+                "colorScheme": "Raspberry Ubuntu",
+                "tabColor": "#dc143c",
+                "useAcrylic": false
+            },
+            {
+                // Make changes here to the powershell.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "colorScheme": "Campbell Powershell",
+                "tabColor": "#FFFFFF"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Raspberry Ubuntu",
+            "background": "#3C0315",
+            "black": "#282A2E",
+            "blue": "#0170C5",
+            "brightBlack": "#676E7A",
+            "brightBlue": "#80c8ff",
+            "brightCyan": "#8ABEB7",
+            "brightGreen": "#B5D680",
+            "brightPurple": "#AC79BB",
+            "brightRed": "#BD6D85",
+            "brightWhite": "#FFFFFD",
+            "brightYellow": "#FFFD76",
+            "cyan": "#3F8D83",
+            "foreground": "#FFFFFD",
+            "green": "#76AB23",
+            "purple": "#7D498F",
+            "red": "#BD0940",
+            "white": "#FFFFFD",
+            "yellow": "#E0DE48"
+        }
+    ],
+    "actions": [
+        // Tab Management
+        {
+            "command": "duplicateTab",
+            "keys": "ctrl+tab"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "ctrl+1"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 1
+            },
+            "keys": "ctrl+2"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 2
+            },
+            "keys": "ctrl+3"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 3
+            },
+            "keys": "ctrl+4"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 4
+            },
+            "keys": "ctrl+5"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 5
+            },
+            "keys": "ctrl+6"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 6
+            },
+            "keys": "ctrl+7"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 7
+            },
+            "keys": "ctrl+8"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 8
+            },
+            "keys": "ctrl+9"
+        },
+        {
+            "command": "nextTab",
+            "keys": "ctrl+space"
+        },
+        // Pane Management
+        {
+            "command": "closePane",
+            "keys": "ctrl+left"
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+up"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal",
+                "splitMode": "duplicate"
+            },
+            "keys": "ctrl+down"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical",
+                "splitMode": "duplicate"
+            },
+            "keys": "ctrl+right"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "ctrl+shift+left"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "right"
+            },
+            "keys": "ctrl+shift+right"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+down"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+left"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+right"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+up"
+        },
+        // Copy and paste
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        // Press Ctrl+Shift+F to open the search box
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        }
+    ]
+}
