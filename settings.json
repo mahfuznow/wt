@@ -13,7 +13,8 @@
                 "hidden": false,
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
-                "useAcrylic": false
+                "useAcrylic": false,
+                "startingDirectory": "." // used for "open Windows Terminal here" context menu so that it starts on that directory
             },
             {
                 "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
