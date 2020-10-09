@@ -1,49 +1,88 @@
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
     "copyOnSelect": true,
     "copyFormatting": false,
+    // A profile specifies a command to execute paired with information about how it should look and feel.
+    // Each one of them will appear in the 'New Tab' dropdown,
+    //   and can be invoked from the commandline with `wt.exe -p xxx`
+    // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
     "profiles": {
         "defaults": {
             // Put settings here that you want to apply to all profiles.
         },
+        // to generate new guid : Open PowerShell and enter [guid]::NewGuid()
         "list": [
             {
+                // Command Promt
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt",
+                "colorScheme": "Frost",
                 "commandline": "cmd.exe",
-                "useAcrylic": false,
-                "startingDirectory": "." // used for "open Windows Terminal here" context menu so that it starts on that directory
+                "startingDirectory": ".",
+                "useAcrylic": true,
+                "acrylicOpacity": 0.2
             },
             {
+                //Kali Linux
                 "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
                 "hidden": false,
                 "name": "kali-linux",
                 "source": "Windows.Terminal.Wsl",
                 "colorScheme": "One Half Dark",
                 "tabColor": "#1E90FF",
-                "useAcrylic": false
+                "useAcrylic": true,
+                "acrylicOpacity": 0.9
             },
             {
+                //Ubuntu
                 "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
                 "hidden": false,
                 "name": "Ubuntu-18.04",
                 "source": "Windows.Terminal.Wsl",
                 "colorScheme": "Raspberry Ubuntu",
                 "tabColor": "#dc143c",
-                "useAcrylic": false
+                "useAcrylic": true,
+                "acrylicOpacity": 0.9
             },
             {
-                // Make changes here to the powershell.exe profile.
+                // Powershell
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
                 "colorScheme": "Campbell Powershell",
-                "tabColor": "#FFFFFF"
+                "cursorColor": "#FFFFFD",
+                "fontFace": "Cascadia Code PL",
+                "useAcrylic": true,
+                "acrylicOpacity": 0.5,
+                "tabColor": "#FFFFFF",
+                "startingDirectory": "L://"
             },
             {
+                // Github bash
+                "guid": "{00d00a14-37d2-4d8f-9170-960710dafaa5}",
+                "acrylicOpacity": 0.75,
+                "closeOnExit": true,
+                "colorScheme": "One Half Dark",
+                "commandline": "\"%PROGRAMFILES%\\Git\\usr\\bin\\bash.exe\" --login -i -l",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "fontFace": "Consolas",
+                "fontSize": 12,
+                "historySize": 9001,
+                "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "GitBash",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
+            },
+            {
+                //Azure
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
@@ -51,6 +90,8 @@
             }
         ]
     },
+    // Add custom color schemes to this array.
+    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [
         {
             "name": "Raspberry Ubuntu",
@@ -72,8 +113,32 @@
             "red": "#BD0940",
             "white": "#FFFFFD",
             "yellow": "#E0DE48"
+        },
+        {
+            "name": "Frost",
+            "background": "#FFFFFF",
+            "black": "#3C5712",
+            "blue": "#17b2ff",
+            "brightBlack": "#749B36",
+            "brightBlue": "#27B2F6",
+            "brightCyan": "#13A8C0",
+            "brightGreen": "#89AF50",
+            "brightPurple": "#F2A20A",
+            "brightRed": "#F49B36",
+            "brightWhite": "#741274",
+            "brightYellow": "#991070",
+            "cyan": "#3C96A6",
+            "foreground": "#000000",
+            "green": "#6AAE08",
+            "purple": "#991070",
+            "red": "#8D0C0C",
+            "white": "#6E386E",
+            "yellow": "#991070"
         }
     ],
+    // Add custom actions and keybindings to this array.
+    // To unbind a key combination from your defaults.json, set the command to "unbound".
+    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
     "actions": [
         // Tab Management
         {
@@ -148,6 +213,11 @@
             "keys": "ctrl+space"
         },
         // Pane Management
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        //{ "command": { "action": "splitPane", "split": "horizontal", "splitMode": "duplicate" }, "keys": "Alt+Shift+D" },
         {
             "command": "closePane",
             "keys": "ctrl+left"
@@ -229,6 +299,7 @@
             "keys": "alt+up"
         },
         // Copy and paste
+        // To learn more about selection, visit https://aka.ms/terminal-selection
         {
             "command": {
                 "action": "copy",
